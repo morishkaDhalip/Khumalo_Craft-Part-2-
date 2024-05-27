@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<style>
+
+    /* Basic styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .image {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .content {
+        overflow: hidden; /* Clear the float */
+    }
+
+    .footer {
+        clear: both;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h1 {
+        background-color: antiquewhite;
+    }
+
+    h2 {
+        background-color: antiquewhite;
+    }
+
+</style>
+
+
+
+
+<html>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="data:image/png;base64,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">
+        </div>
+        <div class="content">
+            <h1>About Our Company</h1>
+            <br />
+            <br />
+            <section>
+                <h2>Our Mission</h2>
+                <p>
+                    At KhumaloCraft Emporium, we believe in the power of craftsmanship. Our mission is to provide a platform for artisans to showcase their work, tell their stories, and reach a global audience. We are committed to supporting
+                    these artisans and contributing to the sustainability of their craft.
+                </p>
+            </section>
+            <br />
+
+            <section>
+                <h2>The Story of James Khumalo</h2>
+                <p>James Khumalo, driven by his passion for artisanal crafts and his vision to connect artisans with a discerning audience, established KhumaloCraft Emporium. His dream was to create a platform that was not only scalable and user-friendly but also accessible to artisans and customers globally.</p>
+            </section>
+            <section>
+                <h2>Our Craftwork</h2>
+                <p>Each piece of craftwork on KhumaloCraft Emporium tells a story. Handcrafted by skilled artisans, these unique pieces reflect the rich heritage and artistic traditions of their creators. We offer a wide range of products, from pottery and textiles to jewelry and home decor.</p>
+
+            </section>
+            <section>
+                <h2>Join Us</h2>
+                <p>We invite you to explore our emporium, discover the stories behind our products, and join us in supporting global artisans. Welcome to KhumaloCraft Emporium.</p>
+            </section>
+        </div>
+
+    </div>
+</body>
+</html>

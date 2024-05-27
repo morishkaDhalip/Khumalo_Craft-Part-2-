@@ -1,0 +1,29 @@
+﻿
+
+@model Khumalo_Craft.Models.LoginModel 
+
+@{
+    ViewData["Title"] = "Login";
+    ViewData["Layout"] = null;
+    
+}
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <center>
+    <h1>Login</h1>
+        <form asp-action="Index" method="post">  <div class="container">
+           <input type="hidden" name="_method" value="post" /> <div class="container">
+        <label for="email">Email:</label>
+        <input type="text" placeholder="Enter Email" id="email" name="Email" required>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter Password" id="password" name="Password" required>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </center>
+</body>
+</html>
+
